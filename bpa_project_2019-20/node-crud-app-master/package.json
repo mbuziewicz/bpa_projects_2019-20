@@ -1,0 +1,30 @@
+{
+  "name": "node-crud-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js --exec babel-node --presets env",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Pavan Solapure",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "event-stream": "^4.0.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.0.0",
+    "http": "0.0.0",
+    "mongoose": "^5.2.17",
+    "nodemon": "^1.18.4"
+  },
+  "devDependencies": {
+    "@types/mongoose": "^5.2.17",
+    "babel-cli": "^6.26.0",
+    "jquery": "^3.3.1"
+  }
+}
