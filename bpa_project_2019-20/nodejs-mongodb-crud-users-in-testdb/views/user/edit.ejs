@@ -1,0 +1,33 @@
+<!--
+including header content which is common for all pages
+-->
+<%- include ../layouts/header.ejs %>	
+		
+<% if (messages.error) { %>
+	<p style="color:red"><%- messages.error %></p>
+<% } %>
+
+<% if (messages.success) { %>
+	<p style="color:green"><%- messages.success %></p>
+<% } %>
+
+<form action="/users/edit/<%= id %>" method="post" name="form1">
+	<div class="form-group">
+				<label for="name1">Name</label>
+				<input type="text" class="form-control" id="name" name="name" aria-describedby="nameHelp" placeholder="Enter name" value="<%= name %>">
+		</div>
+		<div class="form-group">
+				<label for="age1">Name</label>
+				<input type="text" class="form-control" id="age" name="age" aria-describedby="ageHelp" placeholder="Enter age" value="<%= age %>">
+			</div>
+		<div class="form-group">
+			<label for="exampleInputEmail1">Email address</label>
+			<input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email" value="<%= email %>">
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+		<input type="hidden" name="_method" value="PUT" />
+	</form>
+<!--
+including footer content which is common for all pages
+-->
+<%- include ../layouts/footer.ejs %>

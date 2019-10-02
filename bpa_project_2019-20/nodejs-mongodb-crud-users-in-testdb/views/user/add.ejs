@@ -1,0 +1,33 @@
+<!--
+including header content which is common for all pages
+-->
+<%- include ../layouts/header.ejs %>	
+
+<% if (messages.error) { %>
+	<p style="color:red"><%- messages.error %></p>
+<% } %>
+
+<% if (messages.success) { %>
+	<p style="color:green"><%- messages.success %></p>
+<% } %>
+
+<form action="/users/add" method="post" name="form1">
+	<div class="form-group">
+				<label for="name">Name</label>
+				<input type="text" class="form-control" id="name" name="name" aria-describedby="nameHelp" placeholder="Enter name" >
+		</div>
+		<div class="form-group">
+				<label for="age">Age</label>
+				<input type="text" class="form-control" id="age" name="age" aria-describedby="ageHelp" placeholder="Enter age" >
+			</div>
+		<div class="form-group">
+			<label for="exampleInputEmail1">Email address</label>
+			<input type="email" id="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter email" >
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	  </form>
+
+<!--
+including footer content which is common for all pages
+-->
+<%- include ../layouts/footer.ejs %>
