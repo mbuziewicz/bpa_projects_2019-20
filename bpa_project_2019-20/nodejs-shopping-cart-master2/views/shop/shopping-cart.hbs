@@ -5,8 +5,8 @@
             <div class="list-group">
                 {{# each products }}
                     <div class="list-group-item border">
+                        <img class="card-img-top shop-image  img-fluid" src="{{ this.item.imagePath }}" alt="Card image cap">
                         <strong>{{ this.item.title }}</strong>
-                        <span class="badge price-cart">${{ this.price }}</span>
                         <div class="btn-group">
                             <button type="button" class="btn btn-raised btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Action
@@ -17,6 +17,7 @@
                             </div>
                         </div>
                         <span class="total">{{ this.qty }}</span>
+                        <span class="badge price-cart"> <strong> ${{ this.price }}</strong> </span>
                     </div>
                 {{/each}}
             </div>
@@ -25,7 +26,7 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <strong>Total: {{ totalPrice }}</strong>
+            <strong>Total: ${{ totalPrice }}</strong>
         </div>
     </div>
     <hr>
