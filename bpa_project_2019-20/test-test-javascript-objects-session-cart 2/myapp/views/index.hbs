@@ -1,0 +1,71 @@
+<!-- Nav -->
+<nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
+    <div class="row">
+        <div class="col">
+          <!-- OLD 
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button>
+          -->
+          <button onclick="window.location.href='/'" type="button" class="btn btn-primary" data-target="#shop">Shop</button>
+          <button onclick="window.location.href='/page2'" type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart2 (<span class="total-count"></span>)</button>
+          <button class="clear-cart btn btn-danger">Clear Cart</button></div>
+    </div>
+</nav>
+
+
+<!-- Main -->
+<div class="container">
+    <div class="row">
+      
+      
+      <div class="col"><!-- col -->
+        <!-- card -->
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="https://3.imimg.com/data3/IC/JO/MY-9839190/organic-lemon-250x250.jpg" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">Lemon</h4>
+            <p class="card-text">Price: $5</p>
+            <a href="#" data-name="Lemon" data-price="5" class="add-to-cart btn btn-primary">Add to cart</a>
+          </div><!-- class="card-block" -->
+        </div><!-- class="card" -->
+      </div><!-- class="col" -->
+
+      <div class="col"><!-- col -->
+        <!-- card -->
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="https://5.imimg.com/data5/UA/MY/MY-24867104/kaffir-lime-500x500.jpg" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">Lime</h4>
+            <p class="card-text">Price: $50</p>
+            <a href="#" data-name="Lime" data-price="50" class="add-to-cart btn btn-primary">Add to cart</a>
+          </div><!-- class="card-block" -->
+        </div><!-- class="card" -->
+      </div><!-- class="col" -->
+
+    </div>
+</div>
+
+  
+ <!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+          
+        </table>
+        <div>Total price: $<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Order now</button>
+      </div>
+    </div>
+  </div>
+</div> 
+
